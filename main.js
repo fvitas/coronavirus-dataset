@@ -53,7 +53,7 @@ async function scrape () {
         countries
     }
 
-    let fileName = './data.json'
+    let fileName = './sample.json'
 
     fs.closeSync(fs.openSync(fileName, 'w'))
     fs.writeFileSync(fileName, JSON.stringify(data, null, 2))
