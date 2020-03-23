@@ -12,7 +12,7 @@ async function scrape () {
 
     let rootAttributes = {}
     let countries = []
-    let rows = $('#main_table_countries_today tbody tr').get()
+    let rows = $('#main_table_countries_yesterday tbody tr').get()
 
     for (let row of rows) {
         let cells = $(row).find('td').get()
