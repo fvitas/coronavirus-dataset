@@ -47,8 +47,15 @@ async function scrape () {
         throw new Error('Countries are empty')
     }
 
+    let DATE_REGEX = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/
+
+    let date = new Date()
+    date.setDate(date.getDate() - 1)
+    let match = DATE_REGEX.exec(date.toISOString())
+    let { year, month, day } = match.groups
+
     let data = {
-        date: new Date().toISOString(),
+        date: `${year}-${month}-${day}T23:59:59.000Z`,
         ...rootAttributes,
         countries
     }
