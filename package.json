@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"description": "",
 	"dependencies": {
-		"got": "10.6.0",
+		"got": "11.8.5",
 		"cheerio": "1.0.0-rc.3"
 	},
 	"scripts": {
